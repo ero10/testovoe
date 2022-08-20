@@ -1,7 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  value: 0,
   filter:
   [
     {
@@ -268,18 +267,86 @@ const initialState = {
             }
         ]
     }
-]
+    ],
+  nowActiveSelectorForTo: {}
 }
 
 export const filter = createSlice({
   name: 'filter',
   initialState,
   reducers: {
-    
+    setToAll: (state) => {
+      state.nowActiveSelectorForTo = {}
+    },
+    setToCrypto: (state) => {
+      state.nowActiveSelectorForTo = {
+        'CASHUSD': 1,
+        'CASHRUB': 1,
+        'ACRUB': 1,
+        'SBERRUB': 1,
+        'TCSBRUB': 1,
+        'CARDRUB': 1,
+        'MONOBUAH': 1,
+        'WIREUAH': 1,
+        'OSDBUAH': 1,
+        'P24UAH': 1,
+        'CASHAED': 1,
+        'CNTRUB': 1,
+      }
+    },
+    setToBRUB: (state) => {
+      state.nowActiveSelectorForTo = {
+        'CASHUSD': 1,
+        'CASHRUB': 1,        
+        'CARDRUB': 1,
+        'MONOBUAH': 1,
+        'WIREUAH': 1,
+        'OSDBUAH': 1,
+        'P24UAH': 1,
+        'CASHAED': 1,
+        'BTC': 1,
+        'ETH': 1,
+        'USDTTRC': 1,
+      }
+    },
+    setToBUAH: (state) => {
+      state.nowActiveSelectorForTo = {
+        'CASHUSD': 1,
+        'CASHRUB': 1,
+        'ACRUB': 1,
+        'SBERRUB': 1,
+        'TCSBRUB': 1,
+        'CARDRUB': 1,
+        'QWRUB': 1,
+        'CASHAED': 1,
+        'CNTRUB': 1,
+        'BTC': 1,
+        'ETH': 1,
+        'USDTTRC': 1,
+      }
+    },
+    setToCash: (state) => {
+      state.nowActiveSelectorForTo = {
+        'ACRUB': 1,
+        'SBERRUB': 1,
+        'TCSBRUB': 1,
+        'CARDRUB': 1,
+        'QWRUB': 1,
+        'CARDUAH': 1,
+        'MONOBUAH': 1,
+        'WIREUAH': 1,
+        'OSDBUAH': 1,
+        'P24UAH': 1,
+        'CNTRUB': 1,
+        'BTC': 1,
+        'ETH': 1,
+        'USDTTRC': 1,
+      }
+    }
   },
 })
 
 // Action creators are generated for each case reducer function
-export const {} = filter.actions
+export const {setToAll, setToCrypto, setToBRUB, setToBUAH, setToCash } = filter.actions
 
 export default filter.reducer

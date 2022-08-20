@@ -1,4 +1,3 @@
-import './App.css';
 import SelectorContainer from './components/Selector/SelectorContainer';
 
 function App() {
@@ -8,3 +7,4 @@ function App() {
 }
 
 export default App;
+

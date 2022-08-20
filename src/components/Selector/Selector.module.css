@@ -1,0 +1,34 @@
+.mainBox{
+  height: 100vh;
+  /* border: 1px solid red; */
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+}
+
+.mainBox__selector{
+  margin-bottom: 30px;
+}
+
+.selector__name{
+  color: rgb(184, 63, 69);
+}
+
+.selector__buttonBox{
+
+}
+
+.selector__buttonBox button{
+  background-color: white;
+  border: 1px;
+  padding: 10px;
+}
+
+.selector__select{
+
+}
